@@ -1,0 +1,7 @@
+.btn-sub{
+    height: 40px;
+    border: none;
+    font-size: 13px;
+    color: #fff;
+    background-color: var(--primary-color);
+}

@@ -1,0 +1,7 @@
+.btn-theme{
+    height: 48px;
+    border: none;
+    font-size: 13px;
+    color: aliceblue;
+    background-color: var(--primary-color);
+}
