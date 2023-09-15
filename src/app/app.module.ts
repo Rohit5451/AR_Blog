@@ -44,7 +44,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    
     // AngularFireAuthModule
   ],
   providers: [],
