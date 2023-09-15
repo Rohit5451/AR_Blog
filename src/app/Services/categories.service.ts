@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 import { map } from 'rxjs/operators';
 
 
@@ -8,14 +8,15 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CategoriesService {
+  afs: any;
 
-  constructor(private afs : AngularFirestore) { }
+  constructor() { }
 
 
   loadData(){
     return  this.afs.collection('categories').snapshotChanges().pipe(
        map(actions =>{
-         return actions.map(a =>{
+         return map((a: { payload: { doc: { data: () => any; id: any; }; }; }) =>{
            const data = a.payload.doc.data();
            const id = a.payload.doc.id;
            return{id,data};

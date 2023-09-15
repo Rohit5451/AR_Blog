@@ -5,14 +5,26 @@
                 <h2 class="text-white">Featured Posts</h2>
                 <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             </div>
+            <div class="col-md-3 mb-3" >
+                <app-post-card ></app-post-card>
+            </div>
+            <div class="col-md-3 mb-3" >
+                <app-post-card ></app-post-card>
+            </div>
+            <div class="col-md-3 mb-3" >
+                <app-post-card ></app-post-card>
+            </div>
+            <div class="col-md-3 mb-3" >
+                <app-post-card ></app-post-card>
+            </div>
         </div>
 
 
 
         <div>
             <div class="row">
-                <div class="col-md-3 mb-3" *ngFor="let featuredPost of featuredPostsArray" >
-                    <app-post-card [postData] ="featuredPost"></app-post-card>
+                <div class="col-md-3 mb-3" >
+                    <app-post-card ></app-post-card>
                 </div>
             </div>
         </div>
@@ -27,8 +39,23 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
     </div>
     <div class="row">
-        <div class="col-md-4 mt-3" *ngFor="let latestPost of latestPostsArray">
-            <app-post-card [postData]="latestPost"></app-post-card>
-        </div> 
+        <div class="col-md-4 mb-3" >
+            <app-post-card ></app-post-card>
+        </div>
+        <div class="col-md-4 mb-3" >
+            <app-post-card ></app-post-card>
+        </div>
+        <div class="col-md-4 mb-3" >
+            <app-post-card ></app-post-card>
+        </div>
+        <div class="col-md-4 mb-3" >
+            <app-post-card ></app-post-card>
+        </div>
+        <div class="col-md-4 mb-3" >
+            <app-post-card ></app-post-card>
+        </div>
+        <div class="col-md-4 mb-3" >
+            <app-post-card ></app-post-card>
+        </div>
     </div>
 </section>

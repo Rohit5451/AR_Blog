@@ -22,7 +22,7 @@ export class SingleCategoryComponent implements OnInit{
     this.route.params.subscribe(val =>{
       this.categoryObj = val;
       
-      this.postService.loadCategoryPosts(val['id']).subscribe(post =>{
+      this.postService.loadCategoryPosts(val['id']).subscribe((post: any[]) =>{
         this.postsArray = post;
       })
     })

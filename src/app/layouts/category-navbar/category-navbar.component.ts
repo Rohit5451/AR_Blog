@@ -15,7 +15,7 @@ export class CategoryNavbarComponent implements OnInit{
 
   
   ngOnInit(): void {
-    this.categoryService.loadData().subscribe(dataArray => {
+    this.categoryService.loadData().subscribe((dataArray: any[]) => {
       this.categoryArray = dataArray.map(item => {
         const category = item.data as Category;
         category.id = item.id;

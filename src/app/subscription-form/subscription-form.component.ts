@@ -22,7 +22,7 @@ export class SubscriptionFormComponent {
       email:formval.email
     }
 
-    this.subService.checkSubs(subData.email).subscribe(val =>{
+    this.subService.checkSubs(subData.email).subscribe((val: { empty: any; }) =>{
       if(val.empty){
         this.subService.addSubs(subData);
         this.isSubscribed = true;

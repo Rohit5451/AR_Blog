@@ -16,12 +16,12 @@ export class HomeComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.postService.loadFeatured().subscribe(val =>{
+    this.postService.loadFeatured().subscribe((val: any[]) =>{
       
       this.featuredPostsArray = val;
     });
 
-    this.postService.loadLatest().subscribe(val =>{
+    this.postService.loadLatest().subscribe((val: any[]) =>{
       
       this.latestPostsArray =val;
     })

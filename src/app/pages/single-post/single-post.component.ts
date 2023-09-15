@@ -19,7 +19,7 @@ export class SinglePostComponent implements OnInit{
     this.route.params.subscribe((val : any) =>{
       
       
-      this.postService.loadOnePost(val['id']).subscribe(post =>{
+      this.postService.loadOnePost(val['id']).subscribe((post: any) =>{
         this.postData = post;
         this.loadSimilarPost(this.postData.category.categoryId);
       })
@@ -27,7 +27,7 @@ export class SinglePostComponent implements OnInit{
   }
 
   loadSimilarPost(catId : any){
-    this.postService.loadSimilar(catId).subscribe(val =>{
+    this.postService.loadSimilar(catId).subscribe((val: any[]) =>{
       this.SimilarPostArray = val;
     
     })
